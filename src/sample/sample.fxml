@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<?import sample.MyTextField?>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <TableView fx:id="table1" prefHeight="400.0" prefWidth="322.0">
+        <columns>
+          <TableColumn fx:id="col1" prefWidth="154.0" text="K(i)" />
+          <TableColumn fx:id="col2" prefWidth="167.0" text="y(i)" />
+        </columns>
+      </TableView>
+      <Pane layoutX="332.0" layoutY="269.0" prefHeight="128.0" prefWidth="366.0">
+            <Button fx:id="btnFillNum" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#onClickBtnFillNum" prefHeight="44.0" prefWidth="231.0" text="Заполнить случайными числами K(i)">
+            </Button>
+            <Button fx:id="btnExec" alignment="CENTER" contentDisplay="CENTER" layoutX="257.0" layoutY="15.0" mnemonicParsing="false" onAction="#onClickBtnExec" prefHeight="44.0" prefWidth="95.0" text="Выполнить &#10;задание" textAlignment="CENTER">
+            </Button>
+         <Button fx:id="btnClear" layoutX="14.0" layoutY="88.0" mnemonicParsing="false" onAction="#onClickBtnClear" prefHeight="29.0" prefWidth="114.0" text="Очистка" />
+         <Button onAction="#onclickbtnExit" fx:id="btnClose" layoutX="257.0" layoutY="88.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="95.0" text="Выход" />
+      </Pane>
+      <MyTextField fx:id="textField1" layoutX="382.0" layoutY="158.0" prefHeight="25.0" prefWidth="114.0" />
+      <MyTextField fx:id="textField2" layoutX="382.0" layoutY="200.0" prefHeight="25.0" prefWidth="114.0" />
+      <Label layoutX="350.0" layoutY="162.0" text="a =" />
+      <Label layoutX="350.0" layoutY="204.0" text="b =" />
+      <Button fx:id="btnFillAB" layoutX="517.0" layoutY="157.0" mnemonicParsing="false" onAction="#onClickbtnFillAB" prefHeight="69.0" prefWidth="152.0" text="Заполнить случайными&#10;числами а и b" textAlignment="CENTER" />
+      <ImageView fitHeight="62.0" fitWidth="316.0" layoutX="365.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@formul.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="378.0" layoutY="88.0" text="Данный пример имеет решение при условии, что:&#10;1. K, a и b одновременно не равны 0&#10;2. a и b одновременно не равны 0" textAlignment="CENTER" />
+   </children>
+</AnchorPane>
